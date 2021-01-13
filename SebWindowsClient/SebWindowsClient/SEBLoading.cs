@@ -34,11 +34,11 @@ namespace SebWindowsClient
         /// Call via separate thread
         /// var thread = new Thread(SEBLoading.StartLoading);
         /// thread.Start();
-        /// </summary>
+        /// </summary>S
         static public void StartLoading()
         {
 			// Set the threads desktop to the new desktop if "Create new Desktop" is activated
-			if ((Boolean)SEBClientInfo.getSebSetting(SEBSettings.KeyCreateNewDesktop)[SEBSettings.KeyCreateNewDesktop] || SEBClientInfo.CreateNewDesktopOldValue)
+			if (false)
 			{
 				SEBDesktopController.SetCurrent(SEBClientInfo.SEBNewlDesktop);
 			}

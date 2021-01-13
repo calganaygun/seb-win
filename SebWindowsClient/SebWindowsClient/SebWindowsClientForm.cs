@@ -770,7 +770,7 @@ namespace SebWindowsClient
 
 
 			//Add the OnScreenKeyboardControl (only if not in Create New Desktop Mode)
-			if ((Boolean)SEBClientInfo.getSebSetting(SEBSettings.KeyTouchOptimized)[SEBSettings.KeyTouchOptimized] == true && !(Boolean) SEBClientInfo.getSebSetting(SEBSettings.KeyCreateNewDesktop)[SEBSettings.KeyCreateNewDesktop])
+			if ((Boolean)SEBClientInfo.getSebSetting(SEBSettings.KeyTouchOptimized)[SEBSettings.KeyTouchOptimized] == true && !false)
 			{
                 var sebOnScreenKeyboardToolStripButton = new SEBOnScreenKeyboardToolStripButton();
                 taskbarToolStrip.Items.Add(sebOnScreenKeyboardToolStripButton);
@@ -1785,7 +1785,7 @@ namespace SebWindowsClient
 
                 // Clean clipboard
 
-                SEBClipboard.CleanClipboard();
+                // SEBClipboard.CleanClipboard();
                 Logger.AddInformation("Clipboard deleted.", null, null);
 
                 Logger.AddInformation("Disabling filtered keys");
@@ -1833,7 +1833,7 @@ namespace SebWindowsClient
         public void ExitApplication(bool showLoadingScreen = true)
         {
 			// Only show the loading screen when not in CreateNewDesktop-Mode
-			if ((bool) SEBSettings.settingsCurrent[SEBSettings.KeyCreateNewDesktop])
+			if (false)
 			{
 				showLoadingScreen = false;
 			}

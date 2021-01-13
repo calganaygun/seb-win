@@ -84,7 +84,7 @@ namespace SebWindowsClient.ProcessUtils
                     catch (Exception)
                     {
                         Logger.AddInformation("Send Kill to process " + name);
-                        processToClose.Kill();
+                        // processToClose.Kill();
                         Logger.AddInformation("Successfully sent Kill to process " + name);
                         processToClose.Refresh();
                     }
@@ -122,7 +122,7 @@ namespace SebWindowsClient.ProcessUtils
                     {
                         // If process still hasn't exited, we kill it
                         Logger.AddInformation("Send Kill to process " + name);
-                        processToClose.Kill();
+                        // processToClose.Kill();
                         // Wait max. 10 seconds till the process exits
                         for (int i = 0; i < 10; i++)
                         {

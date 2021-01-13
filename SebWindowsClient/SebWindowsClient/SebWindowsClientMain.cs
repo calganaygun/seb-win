@@ -215,7 +215,7 @@ namespace SebWindowsClient
         public static void StartSplash()
         {
 			// Set the threads desktop to the new desktop if "Create new Desktop" is activated
-			if ((Boolean)SEBClientInfo.getSebSetting(SEBSettings.KeyCreateNewDesktop)[SEBSettings.KeyCreateNewDesktop])
+			if (false)
 			{
 				SEBDesktopController.SetCurrent(SEBClientInfo.SEBNewlDesktop);
 			}
@@ -369,7 +369,7 @@ namespace SebWindowsClient
             //on NT4/NT5 ++ a new desktop is created
             if (SEBClientInfo.IsNewOS)
             {
-				sessionCreateNewDesktop = (Boolean) SEBClientInfo.getSebSetting(SEBSettings.KeyCreateNewDesktop)[SEBSettings.KeyCreateNewDesktop];
+				sessionCreateNewDesktop = false;
 				if (sessionCreateNewDesktop)
 				{
 					SEBClientInfo.OriginalDesktop = SEBDesktopController.GetCurrent();
@@ -419,7 +419,7 @@ namespace SebWindowsClient
 			SEBDesktopWallpaper.BlankWallpaper();
 
             // Clean clipboard
-            SEBClipboard.CleanClipboard();
+            // SEBClipboard.CleanClipboard();
             Logger.AddInformation("Clipboard cleaned.", null, null);
 
             //Search for permitted Applications (used in Taskswitcher (ALT-TAB) and in foreground watchdog
@@ -450,7 +450,7 @@ namespace SebWindowsClient
 #endif
 
 			//Process watching
-			if ((Boolean) SEBClientInfo.getSebSetting(SEBSettings.KeyCreateNewDesktop)[SEBSettings.KeyCreateNewDesktop] || (Boolean) SEBClientInfo.getSebSetting(SEBSettings.KeyKillExplorerShell)[SEBSettings.KeyKillExplorerShell])
+			if (false || (Boolean) SEBClientInfo.getSebSetting(SEBSettings.KeyKillExplorerShell)[SEBSettings.KeyKillExplorerShell])
 			{
 				#region Foreground Window Watching (Allowed Executables)
 

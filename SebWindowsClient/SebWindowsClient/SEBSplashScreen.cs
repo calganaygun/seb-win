@@ -88,7 +88,7 @@ namespace SebWindowsClient
         static public void StartSplash()
         {
 			// Set the threads desktop to the new desktop if "Create new Desktop" is activated
-			if (SEBClientInfo.SEBNewlDesktop != null && (Boolean) SEBClientInfo.getSebSetting(SEBSettings.KeyCreateNewDesktop)[SEBSettings.KeyCreateNewDesktop])
+			if (false)
 			{
 				SEBDesktopController.SetCurrent(SEBClientInfo.SEBNewlDesktop);
 			}

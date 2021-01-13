@@ -88,7 +88,8 @@ namespace SebWindowsClient.ConfigurationUtils
 			//SEBClientInfo.SebWindowsClientForm.Dispose();
 
 			// We need to check if setting for createNewDesktop changed
-			SEBClientInfo.CreateNewDesktopOldValue = (bool) SEBSettings.valueForDictionaryKey(SEBSettings.settingsCurrent, SEBSettings.KeyCreateNewDesktop);
+            // Check this
+			SEBClientInfo.CreateNewDesktopOldValue = false;
 
 			if ((int)sebPreferencesDict[SEBSettings.KeySebConfigPurpose] == (int)SEBSettings.sebConfigPurposes.sebConfigPurposeStartingExam)
             {
@@ -112,7 +113,7 @@ namespace SebWindowsClient.ConfigurationUtils
 
 				// Check if SEB is running on the standard desktop and the new settings demand to run in new desktop (createNewDesktop = true)
 				// or the other way around!
-				if (SEBClientInfo.CreateNewDesktopOldValue != (bool)SEBSettings.valueForDictionaryKey(SEBSettings.settingsCurrent, SEBSettings.KeyCreateNewDesktop))
+				if (false)
 				{
 					// If it did, SEB needs to quit and be restarted manually for the new setting to take effekt
 					if (SEBClientInfo.CreateNewDesktopOldValue == false)
@@ -185,7 +186,7 @@ namespace SebWindowsClient.ConfigurationUtils
 					//SEBClientInfo.SebWindowsClientForm.Activate();
 
 					// Check if setting for createNewDesktop changed
-					if (SEBClientInfo.CreateNewDesktopOldValue != (bool)SEBSettings.valueForDictionaryKey(SEBSettings.settingsCurrent, SEBSettings.KeyCreateNewDesktop))
+					if (false)
 					{
 						// If it did, SEB needs to quit and be restarted manually for the new setting to take effekt
 						SEBMessageBox.Show(SEBUIStrings.sebReconfiguredRestartNeeded, SEBUIStrings.sebReconfiguredRestartNeededReason, MessageBoxIcon.Warning, MessageBoxButtons.OK);
